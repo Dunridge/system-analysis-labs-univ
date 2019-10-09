@@ -17,7 +17,7 @@ def choose_lab(lab_number):
         a1 = int(input("please, input a1 (a1 є [1, 10]): "))
         a2 = int(input("please, input a2 (a2 є [1, 10]): "))
         b = 1  # as given on the page 8
-        q = int(input("please, input q: "))
+        q = int(input("please, input q (q є [2, 10]): "))
         t = float(input("please, input t (t є [0.001, 0.1]): "))
         # t might be float
         ko = int(input("please, input ko: "))

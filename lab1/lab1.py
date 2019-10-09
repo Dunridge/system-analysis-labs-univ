@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
+
 # transcient_process
 class transcient_process:
     def __init__(self, a1, a2, b, q, t, ko, xo):
@@ -33,8 +34,8 @@ class transcient_process:
         plt.xlabel('t - time')
         plt.ylabel('y(t) - output process')
         plt.scatter(x, y)
-        plt.scatter(x, self.y2, c='red')
-        plt.scatter(x, self.y3, c='green')
+        plt.scatter(x, self.y2, c='orange')
+        plt.scatter(x, self.y3, c='blue')
         plt.legend(['x1', 'x2', 'x3'], loc=4)
         plt.show()
 
@@ -97,4 +98,3 @@ class transcient_process:
         phi = self.phi_function()
         print('phi_function ', phi)
         print('gamma_function ', self.gamma_function(phi))
-
