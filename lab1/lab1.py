@@ -8,6 +8,7 @@ class transcient_process:
     def __init__(self, a1, a2, b, q, t, ko, xo):
         self.change_data(a1, a2, b, q, t, ko, xo)
 
+
     # just loads new data into the model
     def change_data(self, a1, a2, b, q, t, ko, xo):
         self.a1 = a1
@@ -15,12 +16,34 @@ class transcient_process:
         self.b = b
         self.q = q
         self.to = t
-        self.ko = ko
+        self.ko = self.check_interval_for_k(ko) #TODO: input k0 here and check in the lab and call the necessary method
         self.xo = np.array([xo, xo, xo])
         self.t_range = np.arange(0, 10 + self.to, self.to)
         self.A = np.matrix([[0, 1, 0], [0, 0, 1], [-1, -self.a1, -self.a2]])
         self.B = np.array([[0, 0, self.b]])
         self.C = np.array([1, 0, 0])
+
+    #checks the entered k and returns k0 depending on the mode
+    def check_interval_for_k(self, ko): #this will return ko for now
+        '''
+        what you have to do: 
+        your function's behavior changes  depending on your 
+        entered values for k  
+        '''
+        chosen_ko = 0
+        if(ko == 1):
+            chosen_ko = 0
+            return chosen_ko
+            # choose the interval with no change
+        if(ko == 2):
+            chosen_ko = 2500
+            return chosen_ko
+            #choose the interval that is split in half
+        if(ko == 3):
+            chosen_ko = 1800
+            return chosen_ko
+            # choose the interval that is split in three pieces
+        # return chosen_ko
 
     # runs model calculating y values then plots
     def run_model(self):

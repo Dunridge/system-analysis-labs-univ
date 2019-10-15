@@ -12,6 +12,14 @@ def not_yet_implemented():
     print("not yet implemented...")
 
 
+def input_ko_for_lr1():
+    print("input 1 for constant control")
+    print("input 2 for change of control in the middle of the given interval")
+    print("input 3 for dividing control into three parts")
+    ko = int(input("please, input ko: "))
+    return ko
+
+
 def choose_lab(lab_number):
     if lab_number == 1:
         a1 = int(input("please, input a1 (a1 є [1, 10]): "))
@@ -20,7 +28,9 @@ def choose_lab(lab_number):
         q = int(input("please, input q (q є [2, 10]): "))
         t = float(input("please, input t (t є [0.001, 0.1]): "))
         # t might be float
-        ko = int(input("please, input ko: "))
+
+        ko = input_ko_for_lr1()
+        # ko = int(input("please, input ko: "))  # define a function for input of variant for change of control
         xo = int(input("please, input xo: "))
         # x0 must be int?
         lab1 = lr1.transcient_process(a1, a2, b, q, t, ko, xo)
