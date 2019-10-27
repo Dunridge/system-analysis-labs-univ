@@ -37,7 +37,27 @@ def choose_lab(lab_number):
         lab1.run_model()
         return
     if lab_number == 2:
-        not_yet_implemented()
+        #input all of the variables:
+        a1 = int(input("please, input a1 (a1 є [1, 10]): "))
+        a2 = int(input("please, input a2 (a2 є [1, 10]): "))
+        b = 1  # as given on the page 8
+        q = int(input("please, input q (q є [2, 10]): "))
+        t = float(input("please, input t (t є [0.001, 0.1]): "))
+        # t might be float
+
+        # ko = input_ko_for_lr1()
+        ko = input("enter ko value for the lab: ")
+        # ko = int(input("please, input ko: "))  # define a function for input of variant for change of control
+        xo = int(input("please, input xo: "))
+        # x0 must be int?
+
+        l2 = float(input("please, input the l2 value: "))
+        l3 = float(input("please, input the l3 value: "))
+        # create the object
+        lab2 = lr2.DynamicModel(a1, a2, b, q, t, ko, xo, l2, l3)
+        # run the lab
+        lab2.runModel()
+        # not_yet_implemented()
         return
     else:
         incorrect_method_number()

@@ -112,7 +112,7 @@ class transcient_process:
         b = np.squeeze(np.array(self.B))
         return a1.dot(b)
 
-    # for debuging and testing purposes
+    # for debugging and testing purposes
     def print_data(self):
         print('A ', self.A)
         print('B ', self.B)
