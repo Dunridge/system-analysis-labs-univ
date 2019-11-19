@@ -34,7 +34,7 @@ class DynamicModel:
         x = self.t_range
         plt.xlabel('t - time')
         plt.ylabel('y(t) - output process')
-        plt.plot(x, y)
+        plt.plot(x, y, color="green")
         plt.show()
 
     # Algorithm core, loads three y arrays into class
