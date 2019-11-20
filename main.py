@@ -76,6 +76,7 @@ def choose_lab(lab_number):
         # not_yet_implemented()
         return
     if lab_number == 3:
+        # def calculate(self, a_0, a_1, b, q, T_0, x_1, x_2, x_3, special_coordinate):
         a, b, c, z = lr3.program_management(100).calculate(1, 3, 1, 3, 0.05, 0, 0, 0, 5)
         lr3.draw_four_parameters(a, c, z, ['x1', 'x2', 'x3', 'u'])
 
@@ -84,21 +85,21 @@ def choose_lab(lab_number):
         # lr4.compare_observations(a, [b1, b], ['without', 'with'])
         # that compares the results
         # 1.1
-        a, b1, c = lr4.study_of_transients(1, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
-        lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
-        # 1.2
-        a, b, c = lr4.study_of_transients(2, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
-        lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
-        # 1.3
-        a, b, c = lr4.study_of_transients(3, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
-        lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
-        # 2
-        a, b, c = lr4.study_of_transients_with_callback(1, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0, 1, 0.05)
-        lr4.compare_observations(a, [b1, b], ['without', 'with'])
-        # 3
-        a, b, c, z = lr4.program_management(110).calculate(1, 3, 1, 10, 0.05, 0, 0, 0, 2)
-        lr4.draw_four_parameters(a, c, z, ['x1', 'x2', 'x3', 'u'])
-        # 4.1
+        # a, b1, c = lr4.study_of_transients(1, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
+        # lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
+        # # 1.2
+        # a, b, c = lr4.study_of_transients(2, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
+        # lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
+        # # 1.3
+        # a, b, c = lr4.study_of_transients(3, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0)
+        # lr4.draw_management(a, c, ['x1', 'x2', 'x3'])
+        # # 2
+        # a, b, c = lr4.study_of_transients_with_callback(1, 100).calculate(1, 3, 1, 10, 0.05, 0, 0, 0, 1, 0.05)
+        # lr4.compare_observations(a, [b1, b], ['without', 'with'])
+        # # 3
+        # a, b, c, z = lr4.program_management(110).calculate(1, 3, 1, 10, 0.05, 0, 0, 0, 2)
+        # lr4.draw_four_parameters(a, c, z, ['x1', 'x2', 'x3', 'u'])
+        # # 4.1
         a, b, c, z = lr4.reconstruct_the_state(1, 200).calculate(1, 3, 1, 10, 0.05, 0, 0, 0, 2, 2, 2)
         lr4.draw_observation_first(a, [b, c, z], ['original', 'recreated', 'error'])
         # 4.2
